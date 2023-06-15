@@ -3,6 +3,7 @@ import requests
 from http.cookiejar import (MozillaCookieJar, Cookie)
 import os
 import re
+import json
 from json import JSONDecodeError
 
 from ..errors import (
