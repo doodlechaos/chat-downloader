@@ -302,7 +302,7 @@ class Chat():
         :type item: dict
         """
         #safe_print(self.format(item), flush=flush)
-        safe_print(str(item), flush=flush)
+        safe_print(str(item).replace("'",'"'), flush=flush)
         
 
     def format(self, item):
