@@ -31,19 +31,20 @@ class ItemFormatter:
         :param path: Path of the format file, defaults to None
         :type path: str, optional
         """
-        default_path = os.path.join(os.path.dirname(
-            os.path.realpath(__file__)), 'custom_formats.json')
+        
+        #default_path = os.path.join(os.path.dirname(
+        #    os.path.realpath(__file__)), 'custom_formats.json')
 
-        with open(default_path) as default_formats:
-            self.format_file = json.load(default_formats)
+        #with open(default_path) as default_formats:
+        #    self.format_file = json.load(default_formats)
 
-        if path is not None:
-            if not os.path.exists(path):
-                raise FormatFileNotFound(
-                    f'Format file not found: "{path}"')
+        #if path is not None:
+        #    if not os.path.exists(path):
+        #        raise FormatFileNotFound(
+        #            f'Format file not found: "{path}"')
 
-            with open(path) as custom_formats:
-                self.format_file.update(json.load(custom_formats))
+        #    with open(path) as custom_formats:
+        #        self.format_file.update(json.load(custom_formats))
 
     def _replace(self, match, item, format_object):
         """Replace a match object with
